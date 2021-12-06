@@ -13,6 +13,11 @@ mongoose
     console.log(err);
 })
 
-app.listen(5000, () => {
+
+  app.get("/api/test", ()=>{
+    console.log("test is successful");
+  })
+
+app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!")
 })
